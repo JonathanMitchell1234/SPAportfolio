@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import GoogleMaps from "../Components/GoogleMap";
+import Map from "../Components/GoogleMap";
 
 
 const AboutContainer = styled.div`
@@ -41,11 +41,17 @@ const Profile = () => {
 	return (
 		<>
 			<AboutContainer>
-				<Name>Your Name</Name>
-				<Role>Your Role</Role>
+				{/* <Name>Your Name</Name>
+				<Role>Your Role</Role> */}
+				<Map />
 				<Bio>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-					enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					Hi, I'm Jonathan Mitchell. I am a 32 year old Front-end Software/Web Developer. I have a passion for creating visually appealing
+					and user-friendly web applications. With a strong foundation in HTML, CSS, and JavaScript, I am skilled in building responsive and
+					mobile-friendly websites that deliver an optimal user experience across all devices. In addition to my technical skills, I am a
+					problem-solver at heart and thrive in collaborative environments. Whether working on a solo project or as part of a team, I am
+					dedicated to delivering high-quality code that meets the needs of my clients and users. I am constantly learning and staying
+					up-to-date on the latest web development trends and technologies. I am excited to bring my skills and dedication to a company
+					where I can make a meaningful impact and continue to grow as a developer.
 				</Bio>
 			</AboutContainer>
 		</>

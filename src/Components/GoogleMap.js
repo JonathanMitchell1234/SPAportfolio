@@ -1,17 +1,25 @@
 import React from "react";
-import { GoogleMap, withGoogleMap } from "react-google-maps";
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
-const MapWrapper = withGoogleMap((props) => {
-	return <GoogleMap defaultZoom={8} defaultCenter={{ lat: -34.397, lng: 150.644 }} />;
-});
+const containerStyle = {
+	width: "95%",
+	height: "300px",
+};
 
-const GoogleMaps = () => {
-    return (
-		
-		<MapWrapper containerElement={<div style={{ height: "400px" }} />} mapElement={<div style={{ height: "100%" }} />} />
-		
+const center = {
+	lat: 39.0914,
+	lng: -84.4958,
+};
+
+function Map() {
+	return (
+		<LoadScript googleMapsApiKey="AIzaSyChZ0jeCFxGrR-wZ3XKjJMAsP2e4DwVQ2k">
+			<GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
+				{/* Child components, such as markers, info windows, etc. */}
+				<></>
+			</GoogleMap>
+		</LoadScript>
 	);
 }
 
-export default GoogleMaps;
-
+export default React.memo(Map);
