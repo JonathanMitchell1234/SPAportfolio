@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import profilephoto from "../profilephoto.jpeg";
+import { RoughNotation } from "react-rough-notation";
 
 const Image = styled.img`
 	width: 100%;
@@ -26,13 +27,24 @@ const Button = styled.button`
 const About = () => {
     
 	return (
-		<div>
-			<Image src={profilephoto} alt="Jonathan Mitchell" />
-			<h1>Jonathan Mitchell</h1>
-			<h2>Web Developer</h2>
-			<Button>Resume</Button>
-			<Button>Contact Me</Button>
-		</div>
+		<>
+		<Image src={profilephoto} alt="Jonathan Mitchell" />
+			<div>
+				<RoughNotation type="highlight" show={true} color={"rgb(27, 203, 8)"} animationDuration={2000}>
+					<h1>Jonathan Mitchell</h1>
+				</RoughNotation>
+				<div>
+					<h2>
+						<RoughNotation type="underline" show={true} color={"rgb(27, 203, 8)"} animationDelay={2000} animationDuration={2000}>
+							Software Developer
+						</RoughNotation>
+					</h2>
+				</div>
+				<div></div>
+				<Button>Resume</Button>
+				<Button>Contact Me</Button>
+			</div>
+		</>
 	);
 };
 

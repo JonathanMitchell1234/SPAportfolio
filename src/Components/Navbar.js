@@ -5,7 +5,7 @@ import Background from "./Components/Background.js"
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  height: 75%;
+//   height: 75%;
   margin: auto;
 `;
 
@@ -29,7 +29,6 @@ const Button = styled.button`
 const CardStarted = styled.div`
   position: relative;
   width: 100%;
-  height: 600px;
   z-index: 11;
   border-radius: 4px;
 
@@ -63,7 +62,6 @@ const CardStarted = styled.div`
 const AdditionalContainer = styled.div`
 	width: 600px;
 	height: 100%;
-	margin: auto;
 	background-size: cover;
 	background-repeat: no-repeat;
 `;
@@ -73,11 +71,6 @@ function MyContainer() {
     <div>
     <Background />
     <Container>
-      <Navbar>
-        <Button>Button 1</Button>
-        <Button>Button 2</Button>
-        <Button>Button 3</Button>
-      </Navbar>
       <CardStarted className="main-content">
         This is the main content of the container.
       </CardStarted>

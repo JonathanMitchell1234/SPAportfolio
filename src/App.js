@@ -4,6 +4,9 @@ import Background from "./Components/Background";
 import "./Styles/Background.css"
 import About from "./Views/About"
 import "./App.css"
+import ContactForm from "./Views/Contact.js"
+import Portfolio from "./Views/Portfolio";
+import Profile from "./Views/Profile";
 
 
 const Container = styled.div`
@@ -42,11 +45,12 @@ const Button = styled.button`
 const Card = styled.div`
 	position: relative;
 	width: 80%;
-	height: 100vh;
+	height: 90vh;
 	z-index: 11;
 	border-radius: 4px;
-	background-color: white;
+	background-color: rgb(227, 250, 241);
 	box-shadow: -9px 18px 5px 0px rgba(0,0,0,0.38);
+  overflow: auto;
 
 	&:before {
 		content: "";
@@ -71,17 +75,21 @@ const Card = styled.div`
 `;
 
 function App() {
-	const [content, setContent] = useState("Content 1");
+	const [content, setContent] = useState(<Profile />);
 
 	return (
 		<Container>
 			<Background />
 			<Navbar>
 				<Button onClick={() => setContent("Content 1")}>About Me</Button>
-				<Button onClick={() => setContent("Content 2")}>Portfolio</Button>
-				<Button onClick={() => setContent("Content 3")}>Contact Me</Button>
+				<Button onClick={() => setContent(<Portfolio />)}>Portfolio</Button>
+				<Button onClick={() => setContent(<ContactForm />)}>Contact</Button>
 			</Navbar>
-			<Card> <About /> </Card>
+			<Card>
+				{" "}
+				<About />
+        {" "}
+			</Card>
 			<Card>{content}</Card>
 		</Container>
 	);
