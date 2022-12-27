@@ -13,6 +13,7 @@ const Form = styled.form`
 	display: flex;
 	flex-direction: column;
 	width: 80%;
+    required: true;
 `;
 
 const Input = styled.input`
@@ -20,6 +21,7 @@ const Input = styled.input`
 	padding: 0.5em;
 	border: 1px solid #ccc;
 	border-radius: 3px;
+    required: true;
 `;
 
 const TextArea = styled.textarea`
@@ -28,6 +30,7 @@ const TextArea = styled.textarea`
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	resize: none;
+    required: true;
 `;
 
 const Button = styled.button`

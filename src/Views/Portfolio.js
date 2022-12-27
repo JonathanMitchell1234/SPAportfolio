@@ -40,14 +40,28 @@ const PortfolioItem = styled.div`
 	}
 `;
 
+const CodeFactor = styled.a`
+
+width:80px;
+height: auto;
+
+
+
+`;
+
 
 const Portfolio = () => {
 	return (
 		<PortfolioContainer>
 			<PortfolioItem>
 				<img src={ReactHTMLtoPDFgen} alt="HTMLtoPDFgen" />
-				<h3>Project name</h3>
-				<p>Brief description of the project</p>
+				<h3>HTML to PDF Generator </h3>
+				<CodeFactor>
+					<a href="https://www.codefactor.io/repository/github/jonathanmitchell1234/reacthtmltopdfgenerator">
+						<img src="https://www.codefactor.io/repository/github/jonathanmitchell1234/reacthtmltopdfgenerator/badge" alt="CodeFactor" />
+					</a>
+				</CodeFactor>
+				<p>Built with: React, MaterialUI, Axios, Git</p>
 				<a href="/path/to/demo">Demo</a>
 				<a href="/path/to/github/repository">GitHub Repository</a>
 			</PortfolioItem>

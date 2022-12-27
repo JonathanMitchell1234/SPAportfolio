@@ -1,20 +1,34 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Background from "./Components/Background";
-import "./Styles/Background.css"
-import About from "./Views/About"
-import "./App.css"
-import ContactForm from "./Views/Contact.js"
+import "./Styles/Background.css";
+import About from "./Views/About";
+import "./App.css";
+import ContactForm from "./Views/Contact.js";
 import Portfolio from "./Views/Portfolio";
 import Profile from "./Views/Profile";
 
+const AppContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`;
 
 const Container = styled.div`
 	display: flex;
 	flex-direction: row;
-	height: 75%;
 	margin: auto;
 	width: 90%;
+	max-width: 1200px;
+	
+  
+  @media (max-width: 768px) {
+		width: 100%;
+		margin-top: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 `;
 
 const Navbar = styled.nav`
@@ -23,7 +37,12 @@ const Navbar = styled.nav`
 	width: 20%;
 	height: 100%;
 	position: relative;
-  margin-top: 30vh;
+	margin-top: 30vh;
+
+	@media (max-width: 768px) {
+		width: 100%;
+		margin-top: 0;
+	}
 `;
 
 const Button = styled.button`
@@ -48,9 +67,13 @@ const Card = styled.div`
 	height: 90vh;
 	border-radius: 4px;
 	background-color: rgb(227, 250, 241);
-	box-shadow: -9px 18px 5px 0px rgba(0,0,0,0.38);
-  overflow: auto;
+	box-shadow: -9px 18px 5px 0px rgba(0, 0, 0, 0.38);
+	overflow: auto;
 
+	@media (max-width: 768px) {
+		width: 100%;
+		height: auto;
+	}
 
 	&:before {
 		position: absolute;
@@ -71,12 +94,12 @@ const Card = styled.div`
 		border-radius: 4px;
 	}
 `;
-
 function App() {
 	const [content, setContent] = useState(<Profile />);
 
 	return (
-		<Container>
+		<AppContainer>
+      <Container>
 			<Background />
 			<Navbar>
 				<Button onClick={() => setContent()}>About Me</Button>
@@ -87,7 +110,8 @@ function App() {
 				<About />
 			</Card>
 			<Card>{content}</Card>
-		</Container>
+      </Container>
+		</AppContainer>
 	);
 }
 
