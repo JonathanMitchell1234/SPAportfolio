@@ -9,27 +9,9 @@ const Container = styled.div`
   margin: auto;
 `;
 
-const Navbar = styled.nav`
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  background-color: #eee;
-`;
-
-const Button = styled.button`
-  background-color: #0070f3;
-  color: #fff;
-  padding: 0.5em 1em;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  margin: 0.5em 0;
-`;
-
 const CardStarted = styled.div`
   position: relative;
   width: 100%;
-  z-index: 11;
   border-radius: 4px;
 
   &:before {
@@ -62,8 +44,8 @@ const CardStarted = styled.div`
 const AdditionalContainer = styled.div`
 	width: 600px;
 	height: 100%;
-	background-size: cover;
-	background-repeat: no-repeat;
+	// background-size: cover;
+	// background-repeat: no-repeat;
 `;
 
 function MyContainer() {

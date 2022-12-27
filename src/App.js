@@ -14,7 +14,7 @@ const Container = styled.div`
 	flex-direction: row;
 	height: 75%;
 	margin: auto;
-	width: 80%;
+	width: 90%;
 `;
 
 const Navbar = styled.nav`
@@ -46,14 +46,13 @@ const Card = styled.div`
 	position: relative;
 	width: 80%;
 	height: 90vh;
-	z-index: 11;
 	border-radius: 4px;
 	background-color: rgb(227, 250, 241);
 	box-shadow: -9px 18px 5px 0px rgba(0,0,0,0.38);
   overflow: auto;
 
+
 	&:before {
-		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -64,7 +63,6 @@ const Card = styled.div`
 	}
 
 	&:after {
-		content: "";
 		position: absolute;
 		left: -15px;
 		top: -15px;
@@ -81,14 +79,12 @@ function App() {
 		<Container>
 			<Background />
 			<Navbar>
-				<Button onClick={() => setContent("Content 1")}>About Me</Button>
+				<Button onClick={() => setContent()}>About Me</Button>
 				<Button onClick={() => setContent(<Portfolio />)}>Portfolio</Button>
 				<Button onClick={() => setContent(<ContactForm />)}>Contact</Button>
 			</Navbar>
 			<Card>
-				{" "}
 				<About />
-        {" "}
 			</Card>
 			<Card>{content}</Card>
 		</Container>

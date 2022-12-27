@@ -2,11 +2,31 @@ import React from "react";
 import styled from "styled-components";
 import profilephoto from "../profilephoto.jpeg";
 import { RoughNotation } from "react-rough-notation";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Image = styled.img`
 	width: 100%;
 	height: auto;
 	clip-path: polygon(100% 0%, 100% 64%, 49% 100%, 23% 81%, 0 64%, 0 0);
+`;
+
+const Socials = styled.div`
+	display: flex;
+	flex-direction: row;
+
+	> div {
+		display: flex;
+		flex-direction: row;
+        padding-top: 15px;
+        padding-bottom: 15px;
+	}
+
+	svg {
+		margin-right: 1.5em;
+	}
 `;
 
 const Button = styled.button`
@@ -24,11 +44,13 @@ const Button = styled.button`
 		background-color: black;
 	}
 `;
+
+
 const About = () => {
     
 	return (
 		<>
-		<Image src={profilephoto} alt="Jonathan Mitchell" />
+			<Image src={profilephoto} alt="Jonathan Mitchell" />
 			<div>
 				<RoughNotation type="highlight" show={true} color={"rgb(27, 203, 8)"} animationDuration={2000}>
 					<h1>Jonathan Mitchell</h1>
@@ -40,7 +62,14 @@ const About = () => {
 						</RoughNotation>
 					</h2>
 				</div>
-				<div></div>
+				<Socials>
+					<div>
+						<LinkedInIcon />
+						<GitHubIcon />
+						<FacebookIcon />
+						<InstagramIcon />
+					</div>
+				</Socials>
 				<Button>Resume</Button>
 				<Button>Contact Me</Button>
 			</div>
