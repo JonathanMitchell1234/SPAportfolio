@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import ReactHTMLtoPDFgen from "../Images/ReactHTMLtoPDFgen.png"
+import hiring from "../Images/hiring.gif"
+import Portfolio2022 from "../Images/Portfolio2022.gif"
+import URLshortener from "../Images/URLshortener.png"
+
 
 const PortfolioContainer = styled.div`
 	display: flex;
@@ -61,28 +65,46 @@ const Portfolio = () => {
 						<img src="https://www.codefactor.io/repository/github/jonathanmitchell1234/reacthtmltopdfgenerator/badge" alt="CodeFactor" />
 					</a>
 				</CodeFactor>
-				<p>Built with: React, MaterialUI, Axios, Git</p>
+				<p>Built with: React, MaterialUI, Emotion, Axios, Git</p>
 				<a href="/path/to/demo">Demo</a>
 				<a href="/path/to/github/repository">GitHub Repository</a>
 			</PortfolioItem>
 			<PortfolioItem>
-				<img src={ReactHTMLtoPDFgen} alt="HTMLtoPDFgen" />
-				<h3>Project name</h3>
-				<p>Brief description of the project</p>
-				<a href="/path/to/demo">Demo</a>
-				<a href="/path/to/github/repository">GitHub Repository</a>
+				<img src={hiring} alt="Brighton Center Hiring Page" />
+				<h3>Brighton Center Hiring Page</h3>
+				<p>
+					Hiring page built for Brighton Center, Inc. <br />
+					Built with: HTML, CSS, SCSS, JavaScript
+				</p>
+				<a href="https://www.brightoncenter.com/careers">Demo</a>
 			</PortfolioItem>
 			<PortfolioItem>
-				<img src={ReactHTMLtoPDFgen} alt="HTMLtoPDFgen" />
-				<h3>Project name</h3>
-				<p>Brief description of the project</p>
-				<a href="/path/to/demo">Demo</a>
-				<a href="/path/to/github/repository">GitHub Repository</a>
+				<img src={Portfolio2022} alt="2022 Portfolio" />
+				<h3>2022 Portfolio</h3>
+				<CodeFactor>
+					<a href="https://www.codefactor.io/repository/github/jonathanmitchell1234/space">
+						<img src="https://www.codefactor.io/repository/github/jonathanmitchell1234/space/badge" alt="CodeFactor" />
+					</a>
+				</CodeFactor>
+				<p>
+					Portfolio for the year 2022 designed and coded by me <br />
+					Built with: HTML, CSS, SCSS, JavaScript
+				</p>
+				<a href="https://www.jonathanmitchell.xyz">Demo</a>
+				<a href="https://github.com/JonathanMitchell1234/space">GitHub Repository</a>
 			</PortfolioItem>
 			<PortfolioItem>
-				<img src={ReactHTMLtoPDFgen} alt="HTMLtoPDFgen" />
-				<h3>Project name</h3>
-				<p>Brief description of the project</p>
+				<img src={URLshortener} alt="URL Shortener" />
+				<h3>URL Shortener</h3>
+				<CodeFactor>
+					<a href="https://www.codefactor.io/repository/github/jonathanmitchell1234/reacturlshortener">
+						<img src="https://www.codefactor.io/repository/github/jonathanmitchell1234/reacturlshortener/badge" alt="CodeFactor" />
+					</a>
+				</CodeFactor>
+				<p>
+					URL Shortener built with Shrtco API <br />
+                    Built with: React, CSS
+				</p>
 				<a href="/path/to/demo">Demo</a>
 				<a href="/path/to/github/repository">GitHub Repository</a>
 			</PortfolioItem>
