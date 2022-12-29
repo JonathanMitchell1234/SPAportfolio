@@ -10,6 +10,7 @@ import Profile from "./Views/Profile";
 import EmojiPeopleSharpIcon from "@mui/icons-material/EmojiPeopleSharp";
 import FolderSharpIcon from "@mui/icons-material/FolderSharp";
 import AlternateEmailSharpIcon from "@mui/icons-material/AlternateEmailSharp";
+// import Footer from "./Components/Footer";
 
 
 const AppContainer = styled.div`
@@ -141,23 +142,31 @@ function App() {
 	const [content, setContent] = useState(<Profile />);
 
 	return (
-		<AppContainer>
-			<Container>
-				<Background />
-				<Navbar>
-					<Button onClick={() => setContent()}> <EmojiPeopleSharpIcon /> <br /> About </Button>
-					<Button onClick={() => setContent(<Portfolio />)}> <FolderSharpIcon /> <br /> Portfolio</Button>
-					<Button onClick={() => setContent(<ContactForm />)}> <AlternateEmailSharpIcon /> <br /> Contact </Button>
-				</Navbar>
-				<Card>
-					<About />
-				</Card>
-				<Card2>
-          {content}
-          
-        </Card2>
-			</Container>
-		</AppContainer>
+		<>
+			<AppContainer>
+				<Container>
+					<Background />
+					<Navbar>
+						<Button onClick={() => setContent(<Profile />)}>
+							{" "}
+							<EmojiPeopleSharpIcon /> <br /> About{" "}
+						</Button>
+						<Button onClick={() => setContent(<Portfolio />)}>
+							{" "}
+							<FolderSharpIcon /> <br /> Portfolio
+						</Button>
+						<Button onClick={() => setContent(<ContactForm />)}>
+							{" "}
+							<AlternateEmailSharpIcon /> <br /> Contact{" "}
+						</Button>
+					</Navbar>
+					<Card>
+						<About />
+					</Card>
+					<Card2>{content}</Card2>
+				</Container>
+			</AppContainer>
+		</>
 	);
 }
 

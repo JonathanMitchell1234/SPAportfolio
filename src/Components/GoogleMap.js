@@ -13,10 +13,12 @@ const center = {
 
 function Map() {
 	return (
-		<LoadScript googleMapsApiKey="AIzaSyChZ0jeCFxGrR-wZ3XKjJMAsP2e4DwVQ2k">
-			<GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
-			</GoogleMap>
-		</LoadScript>
+			<LoadScript googleMapsApiKey="AIzaSyChZ0jeCFxGrR-wZ3XKjJMAsP2e4DwVQ2k">
+				<GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13} disableDefaultUI={true}>
+					{" "}
+				</GoogleMap>
+			</LoadScript>
+		
 	);
 }
 

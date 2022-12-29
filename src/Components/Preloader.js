@@ -28,7 +28,7 @@ function Preloader() {
 
 	return loading ? (
 		<PreloaderContainer>
-			<BallTriangle size={90} color={"green"} />
+			<BallTriangle size={90} color={"yellow"} />
 		</PreloaderContainer>
 	) : (
 		<App />

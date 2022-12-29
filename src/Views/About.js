@@ -52,7 +52,7 @@ const About = () => {
 		<>
 			<Image src={profilephoto} alt="Jonathan Mitchell" />
 			<div>
-				<RoughNotation type="highlight" show={true} color={"rgb(27, 203, 8)"} animationDuration={2000}>
+				<RoughNotation type="highlight" show={true} color={"rgb(27, 203, 8)"} animationDelay={300} animationDuration={2000}>
 					<h1>Jonathan Mitchell</h1>
 				</RoughNotation>
 				<div>
