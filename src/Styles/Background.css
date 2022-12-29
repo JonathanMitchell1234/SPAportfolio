@@ -1,10 +1,7 @@
 body {
     background: linear-gradient(270deg, hwb(164 5% 40%), rgb(55, 7, 122));
     background-size: 400% 400%;
-
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
+    animation: AnimationName 15s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {

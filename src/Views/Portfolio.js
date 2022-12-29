@@ -5,6 +5,7 @@ import hiring from "../Images/hiring.gif"
 import Portfolio2022 from "../Images/Portfolio2022.gif"
 import URLshortener from "../Images/URLshortener.png"
 import ThriftingOnEastern from "../Images/ThriftingOnEastern.png"
+import LePain from "../Images/LePain.png"
 
 
 const PortfolioContainer = styled.div`
@@ -124,6 +125,22 @@ const Portfolio = () => {
 				</p>
 				<a href="https://reacturlshortener.vercel.app/">Demo</a>
 				<a href="https://github.com/JonathanMitchell1234/ReactURLshortener">GitHub Repository</a>
+			</PortfolioItem>
+			<PortfolioItem>
+				<img src={LePain} alt="Le Pain" />
+				<h3>Le Pain</h3>
+				<CodeFactor>
+					<a href="https://www.codefactor.io/repository/github/jonathanmitchell1234/lepainbootstrapproject">
+						<img src="https://www.codefactor.io/repository/github/jonathanmitchell1234/lepainbootstrapproject/badge" alt="CodeFactor" />
+					</a>
+				</CodeFactor>
+				<p>
+					Mockup Design for a Bakery
+					<br />
+					Built with: HTML, CSS, Bootstrap
+				</p>
+				<a href="https://le-pain.vercel.app/">Demo</a>
+				<a href="https://github.com/JonathanMitchell1234/LePainBootstrapProject">GitHub Repository</a>
 			</PortfolioItem>
 		</PortfolioContainer>
 	);

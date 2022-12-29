@@ -1,67 +1,67 @@
-import React from 'react';
-import styled from 'styled-components';
-import Background from "./Components/Background.js"
+import React from "react";
+import styled from "styled-components";
+import EmojiPeopleSharpIcon from "@mui/icons-material/EmojiPeopleSharp";
+import FolderSharpIcon from "@mui/icons-material/FolderSharp";
+import AlternateEmailSharpIcon from "@mui/icons-material/AlternateEmailSharp";
+import Profile from "../Views/Profile.js";
+import Portfolio from "../Views/Portfolio.js"
+import ContactForm from "../Views/Contact.js"
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-//   height: 75%;
-  margin: auto;
-`;
 
-const CardStarted = styled.div`
-  position: relative;
-  width: 100%;
-  border-radius: 4px;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
-    border-radius: 0 0 4px 0;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    left: -15px;
-    top: -15px;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      135deg,
-      @extra-active-color 0%,
-      @extra2-active-color 100%
-    );
-    border-radius: 4px;
-  }
-`;
-
-const AdditionalContainer = styled.div`
-	width: 600px;
+const Navs = styled.nav`
+	display: flex;
+	flex-direction: column;
+	width: 8%;
 	height: 100%;
-	// background-size: cover;
-	// background-repeat: no-repeat;
+	position: relative;
+	margin-top: 30vh;
+
+	@media (max-width: 768px) {
+		width: 100%;
+		margin-top: 0;
+		margin-bottom: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		height: auto;
+		position: static;
+	}
 `;
 
-function MyContainer() {
-  return (
-    <div>
-    <Background />
-    <Container>
-      <CardStarted className="main-content">
-        This is the main content of the container.
-      </CardStarted>
-      <AdditionalContainer className="additional-container">
-        This is the additional container.
-      </AdditionalContainer>
-    </Container>
-    </div>
-  );
+const Button = styled.button`
+	background-color: transparent;
+	color: #fff;
+	padding: 0.5em 1em;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: -2px;
+	border: 1px solid white;
+	font-family: "Roboto Slab", serif;
+
+	&:hover {
+		background-color: black;
+	}
+`;
+
+const Navbuttons = (props) => {
+	const { setContent } = props; // destructure setContent function from props
+
+	return (
+		<Navs>
+			<Button onClick={() => setContent(<Profile />)}>
+				{" "}
+				<EmojiPeopleSharpIcon /> <br /> About{" "}
+			</Button>
+			<Button onClick={() => setContent(<Portfolio />)}>
+				{" "}
+				<FolderSharpIcon /> <br /> Portfolio
+			</Button>
+			<Button onClick={() => setContent(<ContactForm />)}>
+				{" "}
+				<AlternateEmailSharpIcon /> <br /> Contact{" "}
+			</Button>
+		</Navs>
+	);
 }
 
-export default MyContainer;
+export default Navbuttons;
