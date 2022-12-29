@@ -4,6 +4,7 @@ import ReactHTMLtoPDFgen from "../Images/ReactHTMLtoPDFgen.png"
 import hiring from "../Images/hiring.gif"
 import Portfolio2022 from "../Images/Portfolio2022.gif"
 import URLshortener from "../Images/URLshortener.png"
+import ThriftingOnEastern from "../Images/ThriftingOnEastern.png"
 
 
 const PortfolioContainer = styled.div`
@@ -65,7 +66,7 @@ const Portfolio = () => {
 						<img src="https://www.codefactor.io/repository/github/jonathanmitchell1234/reacthtmltopdfgenerator/badge" alt="CodeFactor" />
 					</a>
 				</CodeFactor>
-				<p>Built with: React, MaterialUI, Emotion, Axios, Git</p>
+				<p>Built with: JavaScript, React, MaterialUI, Emotion, Axios, Git</p>
 				<a href="/path/to/demo">Demo</a>
 				<a href="/path/to/github/repository">GitHub Repository</a>
 			</PortfolioItem>
@@ -74,7 +75,7 @@ const Portfolio = () => {
 				<h3>Brighton Center Hiring Page</h3>
 				<p>
 					Hiring page built for Brighton Center, Inc. <br />
-					Built with: HTML, CSS, SCSS, JavaScript
+					Built with: HTML, CSS, SCSS, JavaScript, Git
 				</p>
 				<a href="https://www.brightoncenter.com/careers">Demo</a>
 			</PortfolioItem>
@@ -88,10 +89,26 @@ const Portfolio = () => {
 				</CodeFactor>
 				<p>
 					Portfolio for the year 2022 designed and coded by me <br />
-					Built with: HTML, CSS, SCSS, JavaScript
+					Built with: HTML, CSS, SCSS, JavaScript, Git
 				</p>
 				<a href="https://www.jonathanmitchell.xyz">Demo</a>
 				<a href="https://github.com/JonathanMitchell1234/space">GitHub Repository</a>
+			</PortfolioItem>
+			<PortfolioItem>
+				<img src={ThriftingOnEastern} alt="ThriftingOnEastern" />
+				<h3>Thrifting on Eastern</h3>
+				<CodeFactor>
+					<a href="https://www.codefactor.io/repository/github/jonathanmitchell1234/thriftingoneastern">
+						<img src="https://www.codefactor.io/repository/github/jonathanmitchell1234/thriftingoneastern/badge" alt="CodeFactor" />
+					</a>
+				</CodeFactor>
+				<p>
+					A mockup page for Brighton Center's enterprise, Thrifting on Eastern
+					<br />
+					Built with: JavaScript, React, SCSS, Bootstrap-React, Git
+				</p>
+				<a href="https://thrifting-on-eastern.vercel.app/">Demo</a>
+				<a href="https://github.com/JonathanMitchell1234/ThriftingOnEastern/tree/main/src">GitHub Repository</a>
 			</PortfolioItem>
 			<PortfolioItem>
 				<img src={URLshortener} alt="URL Shortener" />
@@ -103,10 +120,10 @@ const Portfolio = () => {
 				</CodeFactor>
 				<p>
 					URL Shortener built with Shrtco API <br />
-                    Built with: React, CSS
+					Built with: JavaScript, React, CSS, Axios, Git
 				</p>
-				<a href="/path/to/demo">Demo</a>
-				<a href="/path/to/github/repository">GitHub Repository</a>
+				<a href="https://reacturlshortener.vercel.app/">Demo</a>
+				<a href="https://github.com/JonathanMitchell1234/ReactURLshortener">GitHub Repository</a>
 			</PortfolioItem>
 		</PortfolioContainer>
 	);
