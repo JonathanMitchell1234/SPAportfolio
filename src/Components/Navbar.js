@@ -17,6 +17,7 @@ const Navs = styled.nav`
 	margin-top: 30vh;
 
 	@media (max-width: 768px) {
+        flex-direction: row;
 		width: 100%;
 		margin-top: 0;
 		margin-bottom: 5px;
@@ -25,10 +26,12 @@ const Navs = styled.nav`
 		align-items: flex-end;
 		height: auto;
 		position: static;
+        z-index: 9999;
 	}
 `;
 
 const Button = styled.button`
+    width: 100%;
 	background-color: transparent;
 	color: #fff;
 	padding: 0.5em 1em;

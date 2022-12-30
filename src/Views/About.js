@@ -20,14 +20,25 @@ const Socials = styled.div`
 	> div {
 		display: flex;
 		flex-direction: row;
-        padding-top: 15px;
-        padding-bottom: 15px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		
 	}
 
 	svg {
 		margin-right: 1.5em;
+
+		@media (max-width: 768px) {
+			margin-right: 0;
+			margin-left: 0.5em
+		}
+	}
+
+	@media (max-width: 768px) {
+		justify-content: center;
 	}
 `;
+
 
 const Button = styled.button`
 	background-color: transparent;
@@ -45,34 +56,43 @@ const Button = styled.button`
 	}
 `;
 
+const AboutContainer = styled.div`
+
+@media (max-width: 768px) {
+        text-align: center;
+
+}
+`;
 
 const About = () => {
     
 	return (
 		<>
-			<Image src={profilephoto} alt="Jonathan Mitchell" />
-			<div>
-				<RoughNotation type="highlight" show={true} color={"rgb(27, 203, 8)"} animationDelay={300} animationDuration={2000}>
-					<h1>Jonathan Mitchell</h1>
-				</RoughNotation>
+			<AboutContainer>
+				<Image src={profilephoto} alt="Jonathan Mitchell" />
 				<div>
-					<h2>
-						<RoughNotation type="underline" show={true} color={"rgb(27, 203, 8)"} animationDelay={2000} animationDuration={2000}>
-							Software Developer
-						</RoughNotation>
-					</h2>
-				</div>
-				<Socials>
+					<RoughNotation type="highlight" show={true} color={"rgb(27, 203, 8)"} animationDelay={300} animationDuration={2000}>
+						<h1>Jonathan Mitchell</h1>
+					</RoughNotation>
 					<div>
-						<LinkedInIcon />
-						<GitHubIcon />
-						<FacebookIcon />
-						<InstagramIcon />
+						<h2>
+							<RoughNotation type="underline" show={true} color={"rgb(27, 203, 8)"} animationDelay={2000} animationDuration={2000}>
+								Software Developer
+							</RoughNotation>
+						</h2>
 					</div>
-				</Socials>
-				<Button>Resume</Button>
-				<Button>Contact Me</Button>
-			</div>
+					<Socials>
+						<div>
+							<LinkedInIcon />
+							<GitHubIcon />
+							<FacebookIcon />
+							<InstagramIcon />
+						</div>
+					</Socials>
+					<Button>Resume</Button>
+					<Button>Contact Me</Button>
+				</div>
+			</AboutContainer>
 		</>
 	);
 };
