@@ -18,12 +18,23 @@ const Bio = styled.p`
 	max-width: 800px;
 `;
 
+const Header = styled.h3`
+	background-color: rgb(55, 7, 122);
+	color: #fff;
+	padding: 0.5em 1em;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	margin: 0.5em 0;
+`;
+
 const Profile = () => {
 	return (
 		<>
+			<Header>
+				<h3>About Me</h3>
+			</Header>
 			<AboutContainer>
-				{/* <Name>Your Name</Name>
-				<Role>Your Role</Role> */}
 				<Map />
 				<div>
 					<Bio>
@@ -31,12 +42,13 @@ const Profile = () => {
 						<RoughNotation type="underline" show={true} color={"red"} animationDelay={2000} animationDuration={4000}>
 							Greater Cincinnati.
 						</RoughNotation>{" "}
-						I have a passion for creating visually appealing and user-friendly web applications. With a strong foundation in HTML,
-						CSS, JavaScript and React, I am skilled in building responsive and mobile-friendly websites that deliver an optimal user experience across all devices.
-						In addition to my technical skills, I am a problem-solver at heart and thrive in collaborative environments. Whether working
-						on a solo project or as part of a team, I am dedicated to delivering high-quality code that meets the needs of my clients and
-						users. I am constantly learning and staying up-to-date on the latest web development trends and technologies. I am excited to
-						bring my skills and dedication to a company where I can make a meaningful impact and continue to grow as a developer.
+						I have a passion for creating visually appealing and user-friendly web applications. With a strong foundation in HTML, CSS,
+						JavaScript and React, I am skilled in building responsive and mobile-friendly websites that deliver an optimal user experience
+						across all devices. In addition to my technical skills, I am a problem-solver at heart and thrive in collaborative
+						environments. Whether working on a solo project or as part of a team, I am dedicated to delivering high-quality code that
+						meets the needs of my clients and users. I am constantly learning and staying up-to-date on the latest web development trends
+						and technologies. I am excited to bring my skills and dedication to a company where I can make a meaningful impact and
+						continue to grow as a developer.
 					</Bio>
 				</div>
 			</AboutContainer>

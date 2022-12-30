@@ -71,12 +71,12 @@ const About = () => {
 			<AboutContainer>
 				<Image src={profilephoto} alt="Jonathan Mitchell" />
 				<div>
-					<RoughNotation type="highlight" show={true} color={"rgb(27, 203, 8)"} animationDelay={300} animationDuration={2000}>
+					<RoughNotation type="highlight" show={true} color={"rgb(222, 235, 52)"} animationDelay={300} animationDuration={2000}>
 						<h1>Jonathan Mitchell</h1>
 					</RoughNotation>
 					<div>
 						<h2>
-							<RoughNotation type="underline" show={true} color={"rgb(27, 203, 8)"} animationDelay={2000} animationDuration={2000}>
+							<RoughNotation type="underline" show={true} color={"red"} animationDelay={2000} animationDuration={2000}>
 								Software Developer
 							</RoughNotation>
 						</h2>

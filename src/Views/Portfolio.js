@@ -15,6 +15,16 @@ const PortfolioContainer = styled.div`
 	margin: 2em 0;
 `;
 
+const Header = styled.h3`
+	background-color: rgb(55, 7, 122);
+	color: #fff;
+	padding: 0.5em 1em;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	margin: 0.5em 0;
+`;
+
 const PortfolioItem = styled.div`
 	width: 100%;
 	margin-bottom: 2em;
@@ -58,6 +68,8 @@ height: auto;
 
 const Portfolio = () => {
 	return (
+		<>
+		<Header><h3>Portfolio</h3></Header>
 		<PortfolioContainer>
 			<PortfolioItem>
 				<img src={ReactHTMLtoPDFgen} alt="HTMLtoPDFgen" />
@@ -143,6 +155,7 @@ const Portfolio = () => {
 				<a href="https://github.com/JonathanMitchell1234/LePainBootstrapProject">GitHub Repository</a>
 			</PortfolioItem>
 		</PortfolioContainer>
+		</>
 	);
 };
 
