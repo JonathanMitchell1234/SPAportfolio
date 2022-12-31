@@ -17,16 +17,17 @@ const Navs = styled.nav`
 	margin-top: 30vh;
 
 	@media (max-width: 768px) {
-        flex-direction: row;
-		width: 100%;
-		margin-top: 0;
-		margin-bottom: 5px;
-		display: flex;
-		justify-content: center;
-		align-items: flex-end;
-		height: auto;
-		position: static;
-        z-index: 9999;
+        // flex-direction: row;
+		// width: 100%;
+		// margin-top: 0;
+		// margin-bottom: 5px;
+		// display: flex;
+		// justify-content: center;
+		// align-items: flex-end;
+		// height: auto;
+		// position: static;
+        // z-index: 9999;
+        display: none;
 	}
 `;
 

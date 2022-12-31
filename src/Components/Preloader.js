@@ -1,4 +1,4 @@
-import { BallTriangle } from "react-loader-spinner";
+import { CirclesWithBar } from "react-loader-spinner";
 import styled from "styled-components";
 import { useEffect } from "react"
 import { useState } from "react"
@@ -28,7 +28,18 @@ function Preloader() {
 
 	return loading ? (
 		<PreloaderContainer>
-			<BallTriangle size={90} color={"yellow"} />
+			<CirclesWithBar
+				height="100"
+				width="100"
+				color="white"
+				wrapperStyle={{}}
+				wrapperClass=""
+				visible={true}
+				outerCircleColor="yellow"
+				innerCircleColor="purple"
+				barColor=""
+				ariaLabel="circles-with-bar-loading"
+			/>
 		</PreloaderContainer>
 	) : (
 		<App />
