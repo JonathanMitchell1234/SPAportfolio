@@ -8,6 +8,7 @@ import Profile from "./Views/Profile";
 import Navbuttons from "./Components/Navbar";  // import Navbar component
 
 
+
 const AppContainer = styled.div`
 	display: flex;
 	flex-direction: column;

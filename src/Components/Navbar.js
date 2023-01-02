@@ -15,9 +15,10 @@ const Navs = styled.nav`
 	height: 100%;
 	position: relative;
 	margin-top: 30vh;
+	font-family: "League Spartan", sans-serif;
 
 	@media (max-width: 768px) {
-        // flex-direction: row;
+		// flex-direction: row;
 		// width: 100%;
 		// margin-top: 0;
 		// margin-bottom: 5px;
@@ -26,13 +27,13 @@ const Navs = styled.nav`
 		// align-items: flex-end;
 		// height: auto;
 		// position: static;
-        // z-index: 9999;
-        display: none;
+		// z-index: 9999;
+		display: none;
 	}
 `;
 
 const Button = styled.button`
-    width: 100%;
+	width: 100%;
 	background-color: transparent;
 	color: #fff;
 	padding: 0.5em 1em;
@@ -40,10 +41,9 @@ const Button = styled.button`
 	cursor: pointer;
 	margin: -2px;
 	border: 1px solid white;
-	font-family: "Roboto Slab", serif;
 
 	&:hover {
-		background-color: black;
+		background-color: rgb(55, 7, 122);
 	}
 `;
 

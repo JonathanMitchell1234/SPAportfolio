@@ -49,10 +49,11 @@ const Button = styled.button`
 	cursor: pointer;
 	margin: 0.5em 0;
 	border: 2px solid black;
-	font-family: "Roboto Slab", serif;
+	font-family: "League Spartan", sans-serif;
 
 	&:hover {
-		background-color: black;
+		background-color: rgb(55, 7, 122);
+		color: white;
 	}
 `;
 
