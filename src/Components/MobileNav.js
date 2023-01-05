@@ -1,38 +1,27 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+import React from "react";
+import { Navbar } from "react-navbar-menu";
 
-export default function MobileNav() {
-	// Declare and initialize the matches state variable
-	const [matches, setMatches] = React.useState(false);
-
-	React.useEffect(() => {
-		// Update the value of the matches state variable based on the screen width
-		const mediaQuery = window.matchMedia("(max-width: 768px)");
-		setMatches(mediaQuery.matches);
-	}, []);
-
+const MobileNav = () => {
 	return (
-		<Box sx={{ flexGrow: 1 }}>
-			{/* Only render the navbar if the screen width is less than 768px */}
-			{matches && (
-				<AppBar position="static">
-					<Toolbar>
-						<IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-							<MenuIcon />
-						</IconButton>
-						<Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-							News
-						</Typography>
-						<Button color="inherit">Login</Button>
-					</Toolbar>
-				</AppBar>
-			)}
-		</Box>
+		<div>
+			<Navbar
+				IconColor={"yellow"}
+				MenuNumber={4}
+				Position={"bottom"}
+				url1={"#home"}
+				icon1={"bx bx-home-alt"}
+				Center={true}
+				url2={"#aboutme"}
+				icon2={"bx bx-book-alt"}
+				url3={"/contact"}
+				icon3={"bx bx-user"}
+				url4={"#skills"}
+				icon4={"bx bx-pin"}
+				backgroundColor={"#151c28"}
+				activeColor={"#a595e9"}
+			/>
+		</div>
 	);
-}
+};
+
+export default MobileNav;

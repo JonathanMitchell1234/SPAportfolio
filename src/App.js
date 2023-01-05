@@ -5,9 +5,7 @@ import "./Styles/Background.css";
 import About from "./Views/About";
 import "./App.css";
 import Profile from "./Views/Profile";
-import Navbuttons from "./Components/Navbar";  // import Navbar component
-
-
+import Navbuttons from "./Components/Navbar";
 
 const AppContainer = styled.div`
 	display: flex;
@@ -21,7 +19,6 @@ const Container = styled.div`
 	margin: auto;
 	width: 90%;
 	max-width: 1200px;
-
 	@media (max-width: 768px) {
 		width: 100%;
 		margin-top: 0;
@@ -39,12 +36,10 @@ const Card = styled.div`
 	background-color: rgb(227, 250, 241);
 	box-shadow: -9px 18px 5px 0px rgba(0, 0, 0, 0.38);
 	overflow: auto;
-
 	@media (max-width: 768px) {
-		width: 100%;
-		height: auto;
+		width: 100vw;
+		height: 75vh;
 	}
-
 	&:before {
 		position: absolute;
 		top: 0;
@@ -54,7 +49,6 @@ const Card = styled.div`
 		box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 		border-radius: 4px;
 	}
-
 	&:after {
 		position: absolute;
 		left: -15px;
@@ -73,12 +67,10 @@ const Card2 = styled.div`
 	background-color: rgb(227, 250, 241);
 	box-shadow: -9px 18px 5px 0px rgba(0, 0, 0, 0.38);
 	overflow: auto;
-
 	@media (max-width: 768px) {
 		width: 100%;
 		height: auto;
 	}
-
 	&:before {
 		position: absolute;
 		top: 0;
@@ -88,7 +80,6 @@ const Card2 = styled.div`
 		box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 		border-radius: 4px;
 	}
-
 	&:after {
 		position: absolute;
 		left: -15px;
@@ -97,10 +88,15 @@ const Card2 = styled.div`
 		height: 100%;
 		border-radius: 4px;
 	}
+
+	@media (max-width: 768px) {
+		width: 100vw;
+		height: 75vh;
+	}
 `;
 
 function App() {
-	const [content, setContent] = useState(<Profile />);
+	const [content, setContent] = useState(<Profile/>);
 
 	return (
 		<>
@@ -119,4 +115,3 @@ function App() {
 }
 
 export default App;
-
