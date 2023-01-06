@@ -3,6 +3,7 @@ body {
     background-size: 400% 400%;
     animation: AnimationName 15s ease infinite; */
     background: #00c2ab;
+
 }
 
 @keyframes cube {
@@ -26,6 +27,7 @@ body {
     padding: 0;
     background: #088677;
     overflow: hidden;
+    z-index: -1000;
 }
 .background li {
     position: absolute;

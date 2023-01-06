@@ -6,6 +6,7 @@ import About from "./Views/About";
 import "./App.css";
 import Profile from "./Views/Profile";
 import Navbuttons from "./Components/Navbar";
+import ButtonAppBar from "./Components/MobileNav"
 
 const AppContainer = styled.div`
 	display: flex;
@@ -39,6 +40,7 @@ const Card = styled.div`
 	@media (max-width: 768px) {
 		width: 100vw;
 		height: 75vh;
+		margin-top: -8px;
 	}
 	&:before {
 		position: absolute;
@@ -95,6 +97,21 @@ const Card2 = styled.div`
 	}
 `;
 
+const NavStyle = styled.div `
+
+
+@media (min-width: 768px) {
+		display: none;
+		width: 100vw;
+		padding-top: -10px;
+
+}
+
+
+
+
+`;
+
 function App() {
 	const [content, setContent] = useState(<Profile/>);
 
@@ -105,6 +122,9 @@ function App() {
 					<Background />
 					<Navbuttons setContent={setContent} />
 					<Card>
+						<NavStyle>
+							<ButtonAppBar />
+						</NavStyle>
 						<About />
 					</Card>
 					<Card2>{content}</Card2>

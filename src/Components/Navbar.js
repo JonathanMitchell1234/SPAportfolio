@@ -8,26 +8,27 @@ import Portfolio from "../Views/Portfolio.js";
 import ContactForm from "../Views/Contact.js";
 
 const Navs = styled.nav`
-	display: flex;
-	flex-direction: column;
-	width: 8%;
-	height: 100%;
-	position: relative;
-	margin-top: 30vh;
-	font-family: "League Spartan", sans-serif;
-	@media (max-width: 768px) {
-		flex-direction: row;
-		width: 99vw;
-		margin-top: -5px;
-		margin-bottom: 2px;
-		display: flex;
-		justify-content: center;
-		align-items: flex-end;
-		height: auto;
-		position: static;
-		z-index: 9999;
-		// display: none;
-	}
+  display: flex;
+  flex-direction: column;
+  width: 8%;
+  height: 100%;
+  position: relative;
+  margin-top: 30vh;
+  font-family: "League Spartan", sans-serif;
+  @media (max-width: 768px) {
+    // flex-direction: row;
+    // width: 99vw;
+    // margin-top: -5px;
+    // margin-bottom: 2px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: flex-end;
+    // height: auto;
+    // position: static;
+    // z-index: 9999;
+	display: none;
+	z-index: -9999;
+  }
 `;
 
 const Button = styled.button`
@@ -45,12 +46,12 @@ const Button = styled.button`
 	}
 	@media (max-width: 768px) {
 		border: 6px solid white;
-		
+		display: none;
 	}
 `;
 
 const Navbuttons = (props) => {
-	const { setContent } = props; // destructure setContent function from props
+	const { setContent } = props;
 
 	return (
 		<Navs>
@@ -71,3 +72,4 @@ const Navbuttons = (props) => {
 };
 
 export default Navbuttons;
+
