@@ -14,11 +14,3 @@ body,
   height: 100%;
 }
 
-.right {
-  display: flex !important;
-  justify-content: flex-end !important;
-}
-
-.MobileNavGlobal {
-  z-index: 9999;
-}

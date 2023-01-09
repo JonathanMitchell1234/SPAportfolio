@@ -5,8 +5,9 @@ import "./Styles/Background.css";
 import About from "./Views/About";
 import "./App.css";
 import Profile from "./Views/Profile";
-import Navbuttons from "./Components/Navbar";
-import ButtonAppBar from "./Components/MobileNav"
+import MobileNav from "./Components/MobileNav";
+
+
 
 const AppContainer = styled.div`
 	display: flex;
@@ -31,9 +32,9 @@ const Container = styled.div`
 
 const Card = styled.div`
 	position: relative;
-	width: 80%;
+	width: 60%;
 	height: 90vh;
-	border-radius: 4px;
+	border-radius: 15px;
 	background-color: rgb(227, 250, 241);
 	box-shadow: -9px 18px 5px 0px rgba(0, 0, 0, 0.38);
 	overflow: auto;
@@ -65,15 +66,11 @@ const Card2 = styled.div`
 	position: relative;
 	width: 80%;
 	height: 90vh;
-	border-radius: 4px;
+	border-radius: 10px;
 	background-color: rgb(227, 250, 241);
 	box-shadow: -9px 18px 5px 0px rgba(0, 0, 0, 0.38);
 	overflow: auto;
-	@media (max-width: 768px) {
-		width: 100%;
-		height: auto;
-	}
-	&:before {
+  	&:before {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -97,38 +94,25 @@ const Card2 = styled.div`
 	}
 `;
 
-const NavStyle = styled.div `
 
-
-@media (min-width: 768px) {
-		display: none;
-		width: 100vw;
-		padding-top: -10px;
-
-}
-
-
-
-
-`;
 
 function App() {
-	const [content, setContent] = useState(<Profile/>);
+	const [content, setContent] = useState(<Profile />);
+	
 
 	return (
 		<>
 			<AppContainer>
 				<Container>
 					<Background />
-					<Navbuttons setContent={setContent} />
 					<Card>
-						<NavStyle>
-							<ButtonAppBar />
-						</NavStyle>
 						<About />
 					</Card>
-					<Card2>{content}</Card2>
+					<Card2>
+						{content}
+					</Card2>
 				</Container>
+				<MobileNav setContent={setContent} />
 			</AppContainer>
 		</>
 	);
