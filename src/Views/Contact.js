@@ -67,20 +67,20 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Send the email using the fetch function
-    fetch('/API/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        subject: subject,
-        message: message,
-      }),
-    })
-      .then((res) => res.text())
-      .then((text) => console.log(text));
+    fetch("https://2023portfoliojonathanmitchell.vercel.app/API/send-email", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify({
+			name: name,
+			email: email,
+			subject: subject,
+			message: message,
+		}),
+	})
+		.then((res) => res.text())
+		.then((text) => console.log(text));
   };
 
     return (
