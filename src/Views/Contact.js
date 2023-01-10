@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useState } from "react";
+
 
 const FormContainer = styled.div`
 	display: flex;
@@ -54,25 +56,51 @@ const Header = styled.h3`
 `;
 
 
+
+
 const ContactForm = () => {
-	return (
-		<>
-			<div>
-				<Header>
-					<h3>Leave a Message</h3>
-				</Header>
-			</div>
-			<FormContainer>
-				<Form>
-					<Input type="text" placeholder="Name" />
-					<Input type="email" placeholder="Email" />
-					<Input type="text" placeholder="Subject" />
-					<TextArea rows={5} placeholder="Message" />
-					<Button type="submit">Send</Button>
-				</Form>
-			</FormContainer>
-		</>
-	);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Send the email using the fetch function
+    fetch('/API/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
+      }),
+    })
+      .then((res) => res.text())
+      .then((text) => console.log(text));
+  };
+
+    return (
+    <>
+      <div>
+        <Header>
+          <h3>Leave a Message</h3>
+        </Header>
+      </div>
+      <FormContainer>
+        <Form onSubmit={handleSubmit}>
+          <Input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
+          <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <Input type="text" placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
+          <TextArea rows={5} placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)} />
+          <Button type="submit">Send</Button>
+        </Form>
+      </FormContainer>
+    </>
+  );
 };
 
 export default ContactForm;
