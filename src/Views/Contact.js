@@ -67,7 +67,7 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Send the email using the fetch function
-    fetch("https://2023portfoliojonathanmitchell.vercel.app/API/send-email", {
+    fetch("https://2023portfoliojonathanmitchell.vercel.app/api/send-email", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
