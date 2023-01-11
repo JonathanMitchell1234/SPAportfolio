@@ -1,6 +1,5 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
-import { useState } from "react";
 
 
 const FormContainer = styled.div`
@@ -59,48 +58,48 @@ const Header = styled.h3`
 
 
 const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+	const [status, setStatus] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Send the email using the fetch function
-    fetch("https://2023portfoliojonathanmitchell.vercel.app/api/send-email", {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify({
-			name: name,
-			email: email,
-			subject: subject,
-			message: message,
-		}),
-	})
-		.then((res) => res.text())
-		.then((text) => console.log(text));
-  };
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		// get the input fields
+		const form = e.target;
+		const data = new FormData(form);
+		const xhr = new XMLHttpRequest();
+		xhr.open(form.method, form.action);
+		xhr.setRequestHeader("Accept", "application/json");
+		xhr.onreadystatechange = () => {
+			if (xhr.readyState !== XMLHttpRequest.DONE) return;
+			if (xhr.status === 200) {
+				form.reset();
+				setStatus("SUCCESS");
+			} else {
+				setStatus("ERROR");
+			}
+		};
+		xhr.send(data);
+	};
 
-    return (
-    <>
-      <div>
-        <Header>
-          <h3>Leave a Message</h3>
-        </Header>
-      </div>
-      <FormContainer>
-        <Form onSubmit={handleSubmit}>
-          <Input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
-          <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-          <Input type="text" placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
-          <TextArea rows={5} placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)} />
-          <Button type="submit">Send</Button>
-        </Form>
-      </FormContainer>
-    </>
-  );
+	return (
+		<>
+			<div>
+				<Header>
+					<h3>Leave a Message</h3>
+				</Header>
+			</div>
+			<FormContainer>
+				<Form onSubmit={handleSubmit} action="https://formspree.io/mknaneyv" method="POST">
+					<Input type="text" name="Name" placeholder="Name" required />
+					<Input type="email" name="Email" placeholder="Email" required />
+					<Input type="text" name="Subject" placeholder="Subject" required />
+					<TextArea rows={5} name="Message" placeholder="Message" required />
+					<Button type="submit">Send</Button>
+					{status === "SUCCESS" && <p style={{ color: "rgb(55, 7, 122)" }}>Thanks! Your message has been sent.</p>}
+					{status === "ERROR" && <p style={{ color: "red" }}>Ooops! There was an error, please try again.</p>}
+				</Form>
+			</FormContainer>
+		</>
+	);
 };
 
 export default ContactForm;
