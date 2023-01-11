@@ -56,33 +56,6 @@ const Header = styled.h3`
 `;
 
 
-
-
-const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Send the email using the fetch function
-    fetch("https://2023portfoliojonathanmitchell.vercel.app/api/send-email", {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify({
-			name: name,
-			email: email,
-			subject: subject,
-			message: message,
-		}),
-	})
-		.then((res) => res.text())
-		.then((text) => console.log(text));
-  };
-
     return (
     <>
       <div>
