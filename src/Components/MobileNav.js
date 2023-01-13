@@ -6,6 +6,8 @@ import AlternateEmailSharpIcon from "@mui/icons-material/AlternateEmailSharp";
 import Profile from "../Views/Profile";
 import ContactForm from "../Views/Contact";
 import Portfolio from "../Views/Portfolio"
+import HomeIcon from "@mui/icons-material/Home";
+import About from "../Views/About"
 
 const NavbarContainer = styled.div`
 	background-color: #37077a;
@@ -69,6 +71,16 @@ const MobileNav = (props) => {
 							className={activeIndex === 0 ? "active" : ""}
 							onClick={() => {
 								setActiveIndex(0);
+								setContent(<About />);
+								
+							}}
+						>
+							<HomeIcon />
+						</NavbarIcon>
+						<NavbarIcon
+							className={activeIndex === 1 ? "active" : ""}
+							onClick={() => {
+								setActiveIndex(1);
 								setContent(<Profile />);
 								
 							}}
@@ -76,9 +88,9 @@ const MobileNav = (props) => {
 							<EmojiPeopleSharpIcon />
 						</NavbarIcon>
 						<NavbarIcon
-							className={activeIndex === 1 ? "active" : ""}
+							className={activeIndex === 2 ? "active" : ""}
 							onClick={() => {
-								setActiveIndex(1);
+								setActiveIndex(2);
 								setContent(<Portfolio />);
 								
 							}}
@@ -86,9 +98,9 @@ const MobileNav = (props) => {
 							<FolderSharpIcon />
 						</NavbarIcon>
 						<NavbarIcon
-							className={activeIndex === 2 ? "active" : ""}
+							className={activeIndex === 3 ? "active" : ""}
 							onClick={() => {
-								setActiveIndex(2);
+								setActiveIndex(3);
 								setContent(<ContactForm />);
 								
 							}}
@@ -96,7 +108,7 @@ const MobileNav = (props) => {
 							<AlternateEmailSharpIcon />
 						</NavbarIcon>
 					</Navbar>
-					<Highlight offset={activeIndex * 100} width={100 / 3} />
+					<Highlight offset={activeIndex * 100} width={100 / 4} />
 				</NavbarContainer>
 			</div>
 		</>
