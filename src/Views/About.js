@@ -6,6 +6,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 const Image = styled.img`
 	width: 100%;
@@ -22,7 +23,6 @@ const Socials = styled.div`
 		flex-direction: row;
 		padding-top: 15px;
 		padding-bottom: 15px;
-		
 	}
 
 	svg {
@@ -30,7 +30,7 @@ const Socials = styled.div`
 
 		@media (max-width: 768px) {
 			margin-right: 0;
-			margin-left: 0.5em
+			margin-left: 0.5em;
 		}
 	}
 
@@ -38,7 +38,6 @@ const Socials = styled.div`
 		justify-content: center;
 	}
 `;
-
 
 const Button = styled.button`
 	background-color: transparent;
@@ -58,15 +57,32 @@ const Button = styled.button`
 `;
 
 const AboutContainer = styled.div`
-
-@media (max-width: 768px) {
-        text-align: center;
-
-}
+	height: 100%;
+	@media (max-width: 768px) {
+		text-align: center;
+		position: relative;
+	}
 `;
 
+const Arrow = styled.div`
+
+@media (min-width: 768px) {
+        
+		display: none;
+	}
+`;
+
+const arrowContainerStyles = {
+	position: "absolute",
+	bottom: "0",
+	left: "0",
+	right: "0",
+	marginLeft: "auto",
+	marginRight: "auto",
+};
+
+
 const About = () => {
-    
 	return (
 		<>
 			<AboutContainer>
@@ -92,6 +108,11 @@ const About = () => {
 					</Socials>
 					<Button>Resume</Button>
 					<Button>Contact Me</Button>
+					<div style={ arrowContainerStyles}>
+						<Arrow>
+							<ArrowDownwardIcon style={{ fontSize: "5em"}} />
+						</Arrow>
+					</div>
 				</div>
 			</AboutContainer>
 		</>

@@ -40,9 +40,10 @@ const Card = styled.div`
 	overflow: auto;
 	@media (max-width: 768px) {
 		width: 100vw;
-		height: 75vh;
+		height: 110vh;
 		margin-top: -8px;
 	}
+	
 	&:before {
 		position: absolute;
 		top: 0;
@@ -90,30 +91,54 @@ const Card2 = styled.div`
 
 	@media (max-width: 768px) {
 		width: 100vw;
-		height: 75vh;
+		height: 100vh;
+		padding-bottom: 50px;
 	}
 `;
+
+const MobileApp = styled.div`
+@media (min-width: 768px) {
+display: none;
+}
+
+`
+
+const FullScreenApp = styled.div`
+@media (max-width: 768px) {
+	display: none;
+}
+`
 
 
 
 function App() {
 	const [content, setContent] = useState(<Profile />);
+	const [content2, setContent2] =useState(<About />)
 	
 
 	return (
 		<>
-			<AppContainer>
-				<Container>
-					<Background />
-					<Card>
-						<About />
-					</Card>
-					<Card2>
-						{content}
-					</Card2>
-				</Container>
-				<MobileNav setContent={setContent} />
-			</AppContainer>
+			<FullScreenApp>
+				<AppContainer>
+					<Container>
+						<Background />
+						<Card>
+							<About />
+						</Card>
+						<Card2>{content}</Card2>
+					</Container>
+					<MobileNav setContent={setContent} />
+				</AppContainer>
+			</FullScreenApp>
+			<MobileApp>
+				<AppContainer>
+					<Container>
+						<Background />
+						<Card>{content2}</Card>
+					</Container>
+					<MobileNav setContent={setContent2} />
+				</AppContainer>
+			</MobileApp>
 		</>
 	);
 }

@@ -11,14 +11,21 @@ const NavbarContainer = styled.div`
 	background-color: #37077a;
 	position: relative;
 	width: 40vw;
-	margin-top: 20px;
+	height: 100%;
+	margin-top: 40px;
 	border-radius: 10px;
+	@media (max-width: 768px) {
+		width: 100vw;
+		border-radius: 0px;
+		
+	}
 `;
 
 const Navbar = styled.div`
 	display: flex;
 	align-items: center;
 	height: 50px;
+	
 `;
 
 const NavbarIcon = styled.div`
@@ -26,7 +33,6 @@ const NavbarIcon = styled.div`
 	text-align: center;
 	cursor: pointer;
 	color: gray;
-
 	&.active {
 		color: white;
 		font-weight: bold;
@@ -56,7 +62,7 @@ const MobileNav = (props) => {
 
 	return (
 		<>
-			<div>
+			<div style={{position: "fixed", bottom: "0"}}>
 				<NavbarContainer>
 					<Navbar>
 						<NavbarIcon
@@ -80,7 +86,7 @@ const MobileNav = (props) => {
 							<FolderSharpIcon />
 						</NavbarIcon>
 						<NavbarIcon
-							className={activeIndex === 0 ? "active" : ""}
+							className={activeIndex === 2 ? "active" : ""}
 							onClick={() => {
 								setActiveIndex(2);
 								setContent(<ContactForm />);
