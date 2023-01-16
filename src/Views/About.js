@@ -85,8 +85,8 @@ const arrowContainerStyles = {
 
 
 
-const About = (props) => {
-	const { setContent } = props;
+const About = () => {
+	
 	return (
 		<>
 			<AboutContainer>
