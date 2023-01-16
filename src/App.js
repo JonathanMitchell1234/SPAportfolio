@@ -42,6 +42,7 @@ const Card = styled.div`
 		width: 100vw;
 		height: 110vh;
 		margin-top: -8px;
+		border-radius: 0;
 	}
 	
 	&:before {
@@ -93,6 +94,7 @@ const Card2 = styled.div`
 		width: 100vw;
 		height: 100vh;
 		padding-bottom: 50px;
+		border-radius: 0;
 	}
 `;
 
@@ -112,7 +114,7 @@ const FullScreenApp = styled.div`
 
 
 function App() {
-	const [content, setContent] = useState(<Profile />);
+	const [content, setContent] = useState(<Profile/>);
 	const [content2, setContent2] =useState(<About />)
 	
 

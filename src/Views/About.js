@@ -7,6 +7,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import "../App.css";
 
 const Image = styled.img`
 	width: 100%;
@@ -82,7 +83,10 @@ const arrowContainerStyles = {
 };
 
 
-const About = () => {
+
+
+const About = (props) => {
+	const { setContent } = props;
 	return (
 		<>
 			<AboutContainer>
@@ -100,17 +104,28 @@ const About = () => {
 					</div>
 					<Socials>
 						<div>
-							<LinkedInIcon />
-							<GitHubIcon />
-							<FacebookIcon />
-							<InstagramIcon />
+							<a href="https://www.linkedin.com/in/jonathan-mitchell-81b6bb21a/" style={{ color: "black" }}>
+								<LinkedInIcon />
+							</a>
+							<a href="https://github.com/jonathanmitchell1234" style={{ color: "black" }}>
+								<GitHubIcon />
+							</a>
+							<a href="https://www.facebook.com/jonathan.c.mitchell.5" style={{ color: "black" }}>
+								<FacebookIcon />
+							</a>
+							<a href="https://www.instagram.com/j0nathanmitchell/" style={{ color: "black" }}>
+								<InstagramIcon />
+							</a>
 						</div>
 					</Socials>
-					<Button>Resume</Button>
+
+					<a href="https://drive.google.com/file/d/1WM76xR67-vyxMvu0vLGXUL4Pb71zU6gi/view?usp=sharing">
+						<Button>Resume</Button>
+					</a>
 					<Button>Contact Me</Button>
-					<div style={ arrowContainerStyles}>
+					<div style={arrowContainerStyles}>
 						<Arrow>
-							<ArrowDownwardIcon style={{ fontSize: "5em"}} />
+							<ArrowDownwardIcon style={{ fontSize: "5em" }} />
 						</Arrow>
 					</div>
 				</div>

@@ -23,6 +23,9 @@ const Header = styled.h3`
 	border-radius: 3px;
 	cursor: pointer;
 	margin: 0;
+	@media (max-width: 768px) {
+		border-radius: 0;
+	}
 `;
 
 const PortfolioItem = styled.div`

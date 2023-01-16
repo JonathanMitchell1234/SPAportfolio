@@ -6,7 +6,7 @@ const FormContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-    margin-top: 20%;
+    margin-top: 15%;
    
 `;
 
@@ -52,6 +52,9 @@ const Header = styled.h3`
 	border-radius: 3px;
 	cursor: pointer;
 	margin: 0;
+	@media (max-width: 768px) {
+		border-radius: 0;
+	}
 `;
 
 
@@ -92,7 +95,7 @@ const ContactForm = () => {
 					<Input type="text" name="Name" placeholder="Name" required />
 					<Input type="email" name="Email" placeholder="Email" required />
 					<Input type="text" name="Subject" placeholder="Subject" required />
-					<TextArea rows={5} name="Message" placeholder="Message" required />
+					<TextArea rows={10} name="Message" placeholder="Message" required />
 					<Button type="submit">Send</Button>
 					{status === "SUCCESS" && <p style={{ color: "rgb(55, 7, 122)" }}>Thanks! Your message has been sent.</p>}
 					{status === "ERROR" && <p style={{ color: "red" }}>Ooops! There was an error, please try again.</p>}
