@@ -6,7 +6,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import "../App.css";
 
 const Image = styled.img`
@@ -111,7 +111,7 @@ const About = () => {
 					</RoughNotation>
 					<div>
 						<h2>
-							<RoughNotation type="underline" show={true} color={"rgb(55, 7, 122)"} animationDelay={2000} animationDuration={2000}>
+							<RoughNotation type="underline" show={true} color={"rgb(5,83,74)"} animationDelay={2000} animationDuration={2000}>
 								Software Developer
 							</RoughNotation>
 						</h2>
@@ -139,7 +139,7 @@ const About = () => {
 					<Button onClick={() => (window.location.href = "mailto:jonmitchell1234@gmail.com")}>Contact Me</Button>
 					<div style={arrowContainerStyles}>
 						<Arrow>
-							<ArrowDownwardIcon className="bouncingarrow" style={{ fontSize: "3em" }} ref={elementRef} />
+							<KeyboardDoubleArrowDownIcon className="bouncingarrow" style={{ fontSize: "3em" }} ref={elementRef} />
 						</Arrow>
 					</div>
 				</div>

@@ -4,18 +4,26 @@ import styled from "styled-components";
 
 const FormContainer = styled.div`
 	display: flex;
+	position: absolute;
+	width: 100%;
 	flex-direction: column;
 	align-items: center;
-    margin-top: 15%;
-   
+	top: 50%;
+	transform: translateY(-50%);
+	@media (max-width: 725px) {
+		top: 40%;
+		transform: translateY(-40%);
+	}
 `;
 
 const Form = styled.form`
 	display: flex;
+	position: relative;
 	flex-direction: column;
 	width: 80%;
-    required: true;
+	required: true;
 `;
+
 
 const Input = styled.input`
 	margin: 0.5em 0;

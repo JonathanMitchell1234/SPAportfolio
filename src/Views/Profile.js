@@ -41,8 +41,8 @@ const Profile = () => {
 				<Map />
 				<div>
 					<Bio>
-						Hi, I'm Jonathan Mitchell. I am a 32 year old Front-end Software/Web Developer from{" "}
-						<RoughNotation type="underline" show={true} color={"red"} animationDelay={4000} animationDuration={4000}>
+						Hi, I'm Jonathan Mitchell. I am a 32 year old Front-end Software/Web Developer from <br />
+						<RoughNotation type="underline" show={true} color={"rgb(5,83,74)"} animationDelay={4000} animationDuration={4000}>
 							Greater Cincinnati.
 						</RoughNotation>{" "}
 						I have a passion for creating visually appealing and user-friendly web applications. With a strong foundation in HTML, CSS,
