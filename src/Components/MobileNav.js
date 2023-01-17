@@ -41,19 +41,6 @@ const NavbarIcon = styled.div`
 	}
 `;
 
-// const Highlight = styled.div`
-// 	position: absolute;
-// 	bottom: 0;
-// 	left: 0;
-// 	height: 5px;
-// 	background-color: white;
-// 	width: ${(props) => props.width}%;
-// 	transform: translateX(${(props) => props.offset}%);
-// 	transition: transform 0.3s;
-	
-//   }
-// `;
-
 
 
 

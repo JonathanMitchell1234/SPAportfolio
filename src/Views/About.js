@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import profilephoto from "../profilephoto.jpeg";
 import { RoughNotation } from "react-rough-notation";
@@ -67,9 +67,10 @@ const AboutContainer = styled.div`
 `;
 
 const Arrow = styled.div`
-
-@media (min-width: 768px) {
-        
+	@media (min-width: 750px) {
+		display: none;
+	}
+	@media (max-width: 375px) {
 		display: none;
 	}
 `;
@@ -81,18 +82,21 @@ const arrowContainerStyles = {
 	right: "0",
 	marginLeft: "auto",
 	marginRight: "auto",
+	
 };
 
 const NameStyles = styled.div`
 	color: rgb(226, 250, 240);
 `;
 
-
-
-
-
 const About = () => {
-	
+	const elementRef = useRef(null);
+
+	useEffect(() => {
+		setTimeout(() => {
+			elementRef.current.style.display = "none";
+		}, 5000);
+	}, []);
   
 	
 	return (
@@ -132,10 +136,10 @@ const About = () => {
 					<a href="https://drive.google.com/file/d/1WM76xR67-vyxMvu0vLGXUL4Pb71zU6gi/view?usp=sharing">
 						<Button>Resume</Button>
 					</a>
-					<Button onClick={() => window.location.href = "mailto:jonmitchell1234@gmail.com"}>Contact Me</Button>
+					<Button onClick={() => (window.location.href = "mailto:jonmitchell1234@gmail.com")}>Contact Me</Button>
 					<div style={arrowContainerStyles}>
 						<Arrow>
-							<ArrowDownwardIcon className="bouncingarrow" style={{ fontSize: "5em" }} />
+							<ArrowDownwardIcon className="bouncingarrow" style={{ fontSize: "3em" }} ref={elementRef} />
 						</Arrow>
 					</div>
 				</div>
