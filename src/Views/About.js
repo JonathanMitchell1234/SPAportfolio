@@ -63,6 +63,7 @@ const AboutContainer = styled.div`
 		text-align: center;
 		position: relative;
 	}
+	
 `;
 
 const Arrow = styled.div`
@@ -82,38 +83,47 @@ const arrowContainerStyles = {
 	marginRight: "auto",
 };
 
+const NameStyles = styled.div`
+	color: rgb(226, 250, 240);
+`;
+
+
 
 
 
 const About = () => {
+	
+  
 	
 	return (
 		<>
 			<AboutContainer>
 				<Image src={profilephoto} alt="Jonathan Mitchell" />
 				<div>
-					<RoughNotation type="highlight" show={true} color={"rgb(222, 235, 52)"} animationDelay={300} animationDuration={2000}>
-						<h1>Jonathan Mitchell</h1>
+					<RoughNotation type="highlight" show={true} color={"rgb(55, 7, 122)"} animationDelay={300} animationDuration={2000}>
+						<NameStyles>
+							<h1>Jonathan Mitchell</h1>
+						</NameStyles>
 					</RoughNotation>
 					<div>
 						<h2>
-							<RoughNotation type="underline" show={true} color={"red"} animationDelay={2000} animationDuration={2000}>
+							<RoughNotation type="underline" show={true} color={"rgb(55, 7, 122)"} animationDelay={2000} animationDuration={2000}>
 								Software Developer
 							</RoughNotation>
 						</h2>
 					</div>
 					<Socials>
 						<div>
-							<a href="https://www.linkedin.com/in/jonathan-mitchell-81b6bb21a/" style={{ color: "black" }}>
+							<a href="https://www.linkedin.com/in/jonathan-mitchell-81b6bb21a/" title="LinkedIn" style={{ color: "black" }}>
 								<LinkedInIcon />
 							</a>
-							<a href="https://github.com/jonathanmitchell1234" style={{ color: "black" }}>
+							<a href="https://github.com/jonathanmitchell1234" title="GitHub" style={{ color: "black" }}>
 								<GitHubIcon />
 							</a>
-							<a href="https://www.facebook.com/jonathan.c.mitchell.5" style={{ color: "black" }}>
+							<a href="https://www.facebook.com/jonathan.c.mitchell.5" title="Facebook" style={{ color: "black" }}>
 								<FacebookIcon />
 							</a>
-							<a href="https://www.instagram.com/j0nathanmitchell/" style={{ color: "black" }}>
+							<a href="https://www.instagram.com/j0nathanmitchell/" title="Instagram" style={{ color: "black" }}>
 								<InstagramIcon />
 							</a>
 						</div>
@@ -122,10 +132,10 @@ const About = () => {
 					<a href="https://drive.google.com/file/d/1WM76xR67-vyxMvu0vLGXUL4Pb71zU6gi/view?usp=sharing">
 						<Button>Resume</Button>
 					</a>
-					<Button>Contact Me</Button>
+					<Button onClick={() => window.location.href = "mailto:jonmitchell1234@gmail.com"}>Contact Me</Button>
 					<div style={arrowContainerStyles}>
 						<Arrow>
-							<ArrowDownwardIcon style={{ fontSize: "5em" }} />
+							<ArrowDownwardIcon className="bouncingarrow" style={{ fontSize: "5em" }} />
 						</Arrow>
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-import { CirclesWithBar } from "react-loader-spinner";
+import { Triangle } from "react-loader-spinner";
 import styled from "styled-components";
 import { useEffect } from "react"
 import { useState } from "react"
@@ -16,6 +16,16 @@ const PreloaderContainer = styled.div`
     
 `;
 
+const LoaderBackground = styled.div`
+	background: rgb(11, 134, 119);
+	background: radial-gradient(circle, rgba(11, 134, 119, 1) 0%, rgba(55, 7, 122, 1) 50%, rgba(11, 134, 119, 1) 100%);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+`;
+
 function Preloader() {
 	const [loading, setLoading] = useState(true);
 
@@ -23,24 +33,22 @@ function Preloader() {
 		// Fetch data or perform other async tasks here
 		setTimeout(() => {
 			setLoading(false);
-		}, 2000);
+		}, 1000);
 	}, []);
 
 	return loading ? (
-		<PreloaderContainer>
-			<CirclesWithBar
-				height="100"
-				width="100"
-				color="white"
-				wrapperStyle={{}}
-				wrapperClass=""
-				visible={true}
-				outerCircleColor="yellow"
-				innerCircleColor="purple"
-				barColor=""
-				ariaLabel="circles-with-bar-loading"
-			/>
-		</PreloaderContainer>
+		<LoaderBackground>
+			<PreloaderContainer>
+				<Triangle 
+				height="100" 
+				width="100" 
+				color="white" 
+				ariaLabel="triangle-loading" 
+				wrapperStyle={{}} 
+				wrapperClassName="" 
+				visible={true} />
+			</PreloaderContainer>
+		</LoaderBackground>
 	) : (
 		<App />
 	);

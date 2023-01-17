@@ -15,7 +15,7 @@ const NavbarContainer = styled.div`
 	width: 40vw;
 	height: 100%;
 	margin-top: 40px;
-	border-radius: 10px;
+	border-radius: 100px;
 	@media (max-width: 768px) {
 		width: 100vw;
 		border-radius: 0px;
