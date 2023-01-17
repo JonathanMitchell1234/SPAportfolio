@@ -14,7 +14,7 @@ const center = {
 function Map() {
 	const { isLoaded } = useJsApiLoader({
 		id: "google-map-script",
-		googleMapsApiKey: "AIzaSyChZ0jeCFxGrR-wZ3XKjJMAsP2e4DwVQ2k",
+		googleMapsApiKey: process.env.GoogleMapsAPIKey,
 	});
 
 	return isLoaded ? (
