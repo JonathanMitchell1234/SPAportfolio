@@ -17,7 +17,7 @@ function Map() {
 		id: "google-map-script",
 		googleMapsApiKey: process.env.REACT_APP_GoogleMapsAPIkey
 	});
-	console.log(process.env);
+	
 
 	return isLoaded ? (
 		<GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13} disableDefaultUI={true}>

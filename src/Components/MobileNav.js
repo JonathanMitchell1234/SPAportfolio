@@ -13,6 +13,7 @@ const NavbarContainer = styled.div`
 	background-color: #37077a;
 	position: relative;
 	width: 40vw;
+	max-width: 500px;
 	height: 100%;
 	margin-top: 40px;
 	border-radius: 10px;
