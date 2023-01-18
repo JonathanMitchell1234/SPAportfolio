@@ -50,9 +50,8 @@ const Profile = () => {
 						JavaScript and React, I am skilled in building responsive and mobile-friendly websites that deliver an optimal user experience
 						across all devices. In addition to my technical skills, I am a problem-solver at heart and thrive in collaborative
 						environments. Whether working on a solo project or as part of a team, I am dedicated to delivering high-quality code that
-						meets the needs of my clients and users. I am constantly learning and staying up-to-date on the latest web development trends
-						and technologies. I am excited to bring my skills and dedication to a company where I can make a meaningful impact and
-						continue to grow as a developer.
+						meets the needs of the project. I am constantly learning and staying up-to-date on the latest web development trends
+						and technologies.
 					</Bio>
 				</div>
 			</AboutContainer>
