@@ -9,7 +9,7 @@ const AboutContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	padding: 1em;
-	overflow: auto; 
+	height: 120vh;
 `;
 
 const Bio = styled.p`
