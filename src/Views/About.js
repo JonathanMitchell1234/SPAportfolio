@@ -54,6 +54,7 @@ const Button = styled.button`
 	&:hover {
 		background-color: rgb(55, 7, 122);
 		color: white;
+		
 	}
 `;
 
