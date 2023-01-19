@@ -27,7 +27,7 @@ const NavbarContainer = styled.div`
 const Navbar = styled.div`
 	display: flex;
 	align-items: center;
-	height: 50px;
+	height: 40px;
 	
 `;
 

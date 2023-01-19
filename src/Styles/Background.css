@@ -1,11 +1,3 @@
-body {
-    /* background: linear-gradient(270deg, hwb(164 5% 40%), rgb(55, 7, 122));
-    background-size: 400% 400%;
-    animation: AnimationName 15s ease infinite; */
-    background: #00c2ab;
-
-}
-
 @keyframes cube {
     from {
         transform: scale(0) rotate(0deg) translate(-50%, -50%);
