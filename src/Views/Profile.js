@@ -20,6 +20,12 @@ const Bio = styled.p`
 	max-width: 800px;
 	margin-left: 1.1rem;
 	line-height: 2em;
+	@media (max-width: 768px) {
+		text-align: center;
+		margin-left: 0;
+		font-size: 18px;
+		
+	}
 `;
 
 const Header = styled.h3`
