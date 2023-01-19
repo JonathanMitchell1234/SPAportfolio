@@ -71,7 +71,7 @@ const FullScreenApp = styled.div`
 	}
 `;
 
-function App() {
+const App = () => {
 	const [content, setContent] = useState(<Profile />);
 	const [content2, setContent2] = useState(<About />);
 

@@ -16,8 +16,10 @@ const AboutContainer = styled.div`
 const Bio = styled.p`
 	font-size: 1em;
 	line-height: 1.5;
-	text-align: center;
+	text-align: left;
 	max-width: 800px;
+	margin-left: 1.1rem;
+	line-height: 2em;
 `;
 
 const Header = styled.h3`
