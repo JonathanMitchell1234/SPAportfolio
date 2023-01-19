@@ -64,7 +64,6 @@ const AboutContainer = styled.div`
 		text-align: center;
 		position: relative;
 	}
-	
 `;
 
 const Arrow = styled.div`
@@ -88,6 +87,9 @@ const arrowContainerStyles = {
 
 const NameStyles = styled.div`
 	color: rgb(226, 250, 240);
+	@media (max-width: 375px) {
+		padding-bottom: 0.5em;
+	}
 `;
 
 const About = () => {
