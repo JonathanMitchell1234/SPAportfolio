@@ -65,9 +65,6 @@ const Header = styled.h3`
 	}
 `;
 
-
-
-
 const ContactForm = () => {
 	const [status, setStatus] = useState("");
 

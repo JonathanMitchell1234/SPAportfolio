@@ -42,9 +42,6 @@ const NavbarIcon = styled.div`
 	}
 `;
 
-
-
-
 const MobileNav = (props) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const { setContent } = props;

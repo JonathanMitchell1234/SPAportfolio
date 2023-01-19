@@ -12,7 +12,7 @@ const center = {
 	lng: -84.4958,
 };
 
-function Map() {
+const Map = () => {
 	const { isLoaded } = useJsApiLoader({
 		id: "google-map-script",
 		googleMapsApiKey: process.env.REACT_APP_GoogleMapsAPIkey

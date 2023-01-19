@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, React } from "react";
 import styled from "styled-components";
 import Background from "./Components/Background";
 import "./Styles/Background.css";
@@ -6,8 +6,6 @@ import About from "./Views/About";
 import "./App.css";
 import Profile from "./Views/Profile";
 import MobileNav from "./Components/MobileNav";
-
-
 
 const AppContainer = styled.div`
 	display: flex;
@@ -44,24 +42,6 @@ const Card = styled.div`
 		margin-top: -8px;
 		border-radius: 0;
 	}
-	
-	&:before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
-		border-radius: 4px;
-	}
-	&:after {
-		position: absolute;
-		left: -15px;
-		top: -15px;
-		width: 100%;
-		height: 100%;
-		border-radius: 4px;
-	}
 `;
 
 const Card2 = styled.div`
@@ -72,24 +52,6 @@ const Card2 = styled.div`
 	background-color: rgb(227, 250, 241);
 	box-shadow: -9px 18px 5px 0px rgba(0, 0, 0, 0.38);
 	overflow: auto;
-  	&:before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
-		border-radius: 4px;
-	}
-	&:after {
-		position: absolute;
-		left: -15px;
-		top: -15px;
-		width: 100%;
-		height: 100%;
-		border-radius: 4px;
-	}
-
 	@media (max-width: 768px) {
 		width: 100vw;
 		height: 100vh;
@@ -98,24 +60,20 @@ const Card2 = styled.div`
 `;
 
 const MobileApp = styled.div`
-@media (min-width: 768px) {
-display: none;
-}
-
-`
+	@media (min-width: 768px) {
+		display: none;
+	}
+`;
 
 const FullScreenApp = styled.div`
-@media (max-width: 768px) {
-	display: none;
-}
-`
-
-
+	@media (max-width: 768px) {
+		display: none;
+	}
+`;
 
 function App() {
-	const [content, setContent] = useState(<Profile/>);
-	const [content2, setContent2] =useState(<About />)
-	
+	const [content, setContent] = useState(<Profile />);
+	const [content2, setContent2] = useState(<About />);
 
 	return (
 		<>
