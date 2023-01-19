@@ -13,6 +13,7 @@ const PortfolioContainer = styled.div`
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 2em 0;
+	height: auto;
 `;
 
 const Header = styled.h3`
@@ -60,11 +61,8 @@ const PortfolioItem = styled.div`
 `;
 
 const CodeFactor = styled.a`
-
-width:80px;
-height: auto;
-
-
+	width:80px;
+	height: auto;
 
 `;
 
