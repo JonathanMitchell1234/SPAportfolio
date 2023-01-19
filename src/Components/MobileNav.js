@@ -53,8 +53,6 @@ const MobileNav = (props) => {
 		});
 	}, []);
 	
-	
-
 	return (
 		<>
 			<div style={{ position: "fixed", bottom: "0" }}>
@@ -99,7 +97,6 @@ const MobileNav = (props) => {
 							<AlternateEmailSharpIcon />
 						</NavbarIcon>
 					</Navbar>
-					{/* <Highlight offset={activeIndex * 100} width={100 / 4} /> */}
 				</NavbarContainer>
 			</div>
 		</>
