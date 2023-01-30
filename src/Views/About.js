@@ -92,6 +92,7 @@ const NameStyles = styled.div`
 	}
 `;
 
+
 const About = () => {
 	const elementRef = useRef(null);
 
@@ -100,6 +101,8 @@ const About = () => {
 			elementRef.current.style.display = "none";
 		}, 5000);
 	}, []);
+	
+	
   
 	
 	return (
@@ -122,7 +125,7 @@ const About = () => {
 					<Socials>
 						<div>
 							<a href="https://www.linkedin.com/in/jonathan-mitchell-81b6bb21a/" title="LinkedIn" style={{ color: "black" }}>
-								<LinkedInIcon />
+								<LinkedInIcon  />
 							</a>
 							<a href="https://github.com/jonathanmitchell1234" title="GitHub" style={{ color: "black" }}>
 								<GitHubIcon />

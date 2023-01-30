@@ -86,8 +86,8 @@ const Portfolio = () => {
 						</a>
 					</CodeFactor>
 					<p>Built with: JavaScript, React, MaterialUI, Emotion, Axios, Git</p>
-					<a href="/path/to/demo">Demo</a>
-					<a href="/path/to/github/repository">GitHub Repository</a>
+					<a href="https://react-html-to-pd-fgenerator-eioj7god2-jonathanmitchell1234.vercel.app/">Demo</a>
+					<a href="https://github.com/JonathanMitchell1234/ReactHTMLtoPDFgenerator">GitHub Repository</a>
 				</PortfolioItem>
 				<PortfolioItem>
 					<img src={hiring} alt="Brighton Center Hiring Page" />
