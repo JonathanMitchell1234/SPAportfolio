@@ -51,7 +51,7 @@ const PortfolioItem = styled.div`
 		display: block;
 		margin-top: 1em;
 		font-size: 0.9em;
-		color: #0070f3;
+		color: rgb(55, 7, 122);
 		text-decoration: none;
 
 		&:hover {
