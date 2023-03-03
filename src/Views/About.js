@@ -110,7 +110,7 @@ const About = () => {
 			<AboutContainer>
 				<Image src={profilephoto} alt="Jonathan Mitchell" />
 				<div>
-					<RoughNotation type="highlight" show={true} color={"rgb(55, 7, 122)"} animationDelay={300} animationDuration={2000}>
+					<RoughNotation type="highlight" show={true} color={"rgb(55, 7, 122)"} animationDelay={100} animationDuration={3000}>
 						<NameStyles>
 							<h1>Jonathan Mitchell</h1>
 						</NameStyles>

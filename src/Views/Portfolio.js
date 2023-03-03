@@ -6,6 +6,7 @@ import Portfolio2022 from "../Images/Portfolio2022.gif"
 import URLshortener from "../Images/URLshortener.png"
 import ThriftingOnEastern from "../Images/ThriftingOnEastern.png"
 import LePain from "../Images/LePain.png"
+import MiniProject from "../Images/MiniProject.gif"
 
 
 const PortfolioContainer = styled.div`
@@ -163,6 +164,24 @@ const Portfolio = () => {
 					</p>
 					<a href="https://le-pain.vercel.app/">Demo</a>
 					<a href="https://github.com/JonathanMitchell1234/LePainBootstrapProject">GitHub Repository</a>
+				</PortfolioItem>
+				<PortfolioItem>
+					<img src={MiniProject} alt="URL Shortener" />
+					<h3>Single Page App Mini Project</h3>
+					<CodeFactor>
+						<a href="https://www.codefactor.io/repository/github/jonathanmitchell1234/reactrouterminiproject">
+							<img
+								src="https://www.codefactor.io/repository/github/jonathanmitchell1234/reactrouterminiproject/badge"
+								alt="CodeFactor"
+							/>
+						</a>
+					</CodeFactor>
+					<p>
+						Single Page React Mini Project <br />
+						Built with: JavaScript, React, CSS, React-Router-Dom
+					</p>
+					<a href="https://reactrouterdemo.vercel.app/">Demo</a>
+					<a href="https://github.com/JonathanMitchell1234/ReactRouterMiniProject">GitHub Repository</a>
 				</PortfolioItem>
 			</PortfolioContainer>
 		</>
