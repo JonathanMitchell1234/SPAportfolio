@@ -51,16 +51,22 @@ const Profile = () => {
 				<Map />
 				<div>
 					<Bio>
-						Hi, I'm Jonathan Mitchell. I am a 32 year old Front-end Software/Web Developer from <br />
+						Hi, I'm Jonathan Mitchell. I am a 32 year old Software/Web Developer from <br />
 						<RoughNotation type="underline" show={true} color={"rgb(5,83,74)"} animationDelay={4000} animationDuration={4000}>
 							Greater Cincinnati.
 						</RoughNotation>{" "}
 						I have a passion for creating visually appealing and user-friendly web applications. With a strong foundation in HTML, CSS,
-						JavaScript and React, I am skilled in building responsive and mobile-friendly websites that deliver an optimal user experience
-						across all devices. In addition to my technical skills, I am a problem-solver at heart and thrive in collaborative
+						JavaScript and React, I am skilled in building responsive and mobile-friendly websites and applications that deliver an optimal user experience
+						across all devices. I am a problem-solver at heart and thrive in collaborative
 						environments. Whether working on a solo project or as part of a team, I am dedicated to delivering high-quality code that
 						meets the needs of the project. I am constantly learning and staying up-to-date on the latest web development trends
 						and technologies.
+						<br/>
+						<br/>
+						Additionally, I am a graduate of the Commonwealth Coders Full-Stack Development bootcamp, hold several certifications from companies like Google and Meta, and am currently
+						a student pursuing a Bachelor of Science in Software Engineering at Western Governors University.
+						I have professional experience as a Front End Developer and am in search of new opportunities to contribute to a great team.
+
 					</Bio>
 				</div>
 			</AboutContainer>
