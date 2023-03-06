@@ -7,6 +7,7 @@ import URLshortener from "../Images/URLshortener.png"
 import ThriftingOnEastern from "../Images/ThriftingOnEastern.png"
 import LePain from "../Images/LePain.png"
 import MiniProject from "../Images/MiniProject.gif"
+import Portfolio2023 from "../Images/Portfolio2023.png"
 
 
 const PortfolioContainer = styled.div`
@@ -116,6 +117,22 @@ const Portfolio = () => {
 					<a href="https://github.com/JonathanMitchell1234/space">GitHub Repository</a>
 				</PortfolioItem>
 				<PortfolioItem>
+					<img src={Portfolio2023} alt="2023 Portfolio" />
+					<h3>2023 Portfolio</h3>
+					<CodeFactor>
+						<a href="https://www.codefactor.io/repository/github/jonathanmitchell1234/spaportfolio">
+							<img src="https://www.codefactor.io/repository/github/jonathanmitchell1234/spaportfolio/badge" alt="CodeFactor" />
+						</a>
+					</CodeFactor>
+					<p>
+						Portfolio for the year 2023.
+						<br />
+						Built with: JavaScript, React, Styled Components, CSS, Google Maps API, Rough Notation
+					</p>
+					<a href="https://www.jonathanmitchell.xyz/">Demo</a>
+					<a href="https://github.com/JonathanMitchell1234/SPAportfolio">GitHub Repository</a>
+				</PortfolioItem>
+				<PortfolioItem>
 					<img src={ThriftingOnEastern} alt="ThriftingOnEastern" />
 					<h3>Thrifting on Eastern</h3>
 					<CodeFactor>
@@ -166,7 +183,7 @@ const Portfolio = () => {
 					<a href="https://github.com/JonathanMitchell1234/LePainBootstrapProject">GitHub Repository</a>
 				</PortfolioItem>
 				<PortfolioItem>
-					<img src={MiniProject} alt="URL Shortener" />
+					<img src={MiniProject} alt="SPA Mini Project" />
 					<h3>Single Page App Mini Project</h3>
 					<CodeFactor>
 						<a href="https://www.codefactor.io/repository/github/jonathanmitchell1234/reactrouterminiproject">
