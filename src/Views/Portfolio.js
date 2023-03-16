@@ -8,6 +8,7 @@ import ThriftingOnEastern from "../Images/ThriftingOnEastern.png"
 import LePain from "../Images/LePain.png"
 import MiniProject from "../Images/MiniProject.gif"
 import Portfolio2023 from "../Images/Portfolio2023.png"
+import RedditBot from "../Images/RedditBot.png"
 
 
 const PortfolioContainer = styled.div`
@@ -69,6 +70,8 @@ const CodeFactor = styled.a`
 `;
 
 
+
+
 const Portfolio = () => {
 	return (
 		<>
@@ -76,6 +79,21 @@ const Portfolio = () => {
 				<h3>Portfolio</h3>
 			</Header>
 			<PortfolioContainer>
+				<PortfolioItem>
+					<img src={RedditBot} alt="HTMLtoPDFgen" />
+					<h3>Reddit Comment Bot </h3>
+					<CodeFactor>
+						<a href="https://www.codefactor.io/repository/github/jonathanmitchell1234/reddit_comment_bot">
+							<img src="https://www.codefactor.io/repository/github/jonathanmitchell1234/reddit_comment_bot/badge" alt="CodeFactor" />
+						</a>
+					</CodeFactor>
+					<p>
+						A simple Python script that parses a chosen subreddit for keywords and automatically replies with comments of your choice.{" "}
+						<br /> <br />
+						Built with: Python, Reddit API, PRAW, Git
+					</p>
+					<a href="https://github.com/JonathanMitchell1234/Reddit_Comment_Bot">GitHub Repository</a>
+				</PortfolioItem>
 				<PortfolioItem>
 					<img src={ReactHTMLtoPDFgen} alt="HTMLtoPDFgen" />
 					<h3>HTML to PDF Generator </h3>
@@ -206,3 +224,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
